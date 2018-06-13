@@ -67,7 +67,13 @@ def make_text(chains, n_gram):
     words = []
     keys_lst = list(chains.keys())
 
+    #start point
     link_tpl = choice(keys_lst)
+
+    while not link_tpl[0][0].isupper():
+        link_tpl = choice(keys_lst)
+
+
     words.extend(list(link_tpl))
     
 
